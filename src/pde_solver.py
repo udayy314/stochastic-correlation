@@ -13,7 +13,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 import numpy as np
 
-from .finite_differences import second_central_diff
+from .finite_differences import central_difference_second
 
 __all__ = ["heat_equation"]
 
@@ -79,7 +79,7 @@ def heat_equation(u0: np.ndarray, config: HeatEqConfig) -> np.ndarray:
         print(f"[heat_equation] Warning: explicit scheme likely unstable (CFL={cfl:.3f} > 0.5)")
 
     for _ in range(steps):
-        lap = second_central_diff(u, dx)
+        lap = central_difference_second(u, dx)
         u = u + alpha * dt * lap
         _apply_bc(u, config.bc)
 
