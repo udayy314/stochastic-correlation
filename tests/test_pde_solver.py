@@ -92,6 +92,6 @@ def test_convergence():
 
 if __name__ == "__main__":
     # Run all tests
-    #test_trivial_case()
+    test_trivial_case()
     test_against_known_solution() 
-    #test_convergence()
+    test_convergence()
