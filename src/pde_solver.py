@@ -1,7 +1,7 @@
 import numpy as np
-from .finite_differences import central_difference_first, central_difference_second
-from .nonlinear_solver import newton_raphson_pde
-from .jacobian import JacobianCalculator
+from finite_differences import central_difference_first, central_difference_second
+from nonlinear_solver import newton_raphson_pde
+from jacobian import JacobianCalculator
 
 class CrankNicolsonSolver:
     def __init__(self, rho_min=0.01, rho_max=0.99, n_rho=100, tau_max=50, n_tau=1000):
