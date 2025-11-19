@@ -28,5 +28,3 @@ class ConvergenceModel:
     sigma_u: float = 0.016
     lambda_d: float = 3.315
     lambda_u: float = -0.655
-
-print("hellowrld")
