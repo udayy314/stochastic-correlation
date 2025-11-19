@@ -1,0 +1,8 @@
+# Project dependencies
+numpy
+scipy
+pandas
+matplotlib
+# Use the backport of dataclasses only on Python < 3.7
+# (Python 3.7+ includes dataclasses in the standard library)
+dataclasses; python_version < "3.7"
